@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Column Drop Pattern </title>
+    <style>
+     .container{
+         display: flex;
+         display: -webkit-flex;
+         display: -ms-flexbox;
+         display: -moz-box;
+         flex-wrap: wrap;
+     }
+     .box{
+         height: 300px;
+     }
+     .box.red{
+         background-color: red;
+     }
+     .box.yellow{
+         background-color: yellow;
+     }
+     .box.green{
+         background-color:green;
+     }
+     @media screen and (max-width:400px) {
+         .box{
+            width:100%;
+         }
+     }
+     @media screen and (min-width:401px) {
+         .green {
+             width:100%;
+         }
+         .red, .yellow{
+             width:50%
+         }
+     }
+     @media screen and (min-width:700px) {
+         .box{
+             width:33.333%
+         }
+     }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="box green"></div>
+      <div class="box red"></div>
+      <div class="box yellow"></div>
+    </div>
+</body>
+</html>
