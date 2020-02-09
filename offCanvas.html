@@ -10,13 +10,30 @@
          height:100%;
          width:100%;
      }
+     html,body,main,nav{
+         margin:0px;
+         padding:0px;
+     }
      main{
          background-color:lightblue;
-     
+     }
+     nav{
+         height:100%;
+         width:300px;
+         position:absolute;
+         background-color: darkblue;
+         transform: translate(-300px,0);
+         transition:0.3s ease;
+     }
+     nav.open{
+         transform:translate(0,0)
+     }
     </style>
 </head>
 <body>
-    <nav id="drawer" class="dark-blue"></nav>
+    <nav id="drawer" class="dark-blue">
+    </nav>
+
     <main class="light-blue"></main>
 </body>
 </html>
