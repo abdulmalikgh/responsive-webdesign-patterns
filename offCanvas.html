@@ -28,12 +28,44 @@
      nav.open{
          transform:translate(0,0)
      }
+     @media screen and (min-width:600px){
+       nav{
+           position:relative;
+           transform:translate(0,0)
+       }
+       body{
+           display: flex;
+           flex-flow:row nowrap;
+       }
+       main{
+           width:auto;
+           flex-grow:1;
+       }
+     }
+     button{ 
+         padding:1em;
+         border:1px solid white;
+         margin-left: 1em;
+         position:absolute;
+     }
     </style>
 </head>
 <body>
     <nav id="drawer" class="dark-blue">
     </nav>
 
-    <main class="light-blue"></main>
+    <main class="light-blue">
+        <button id="togle">click</button>
+    </main>
+    <script>
+        const menu = document.getElementsByClassName('main');
+        const drawer = document.querySelector('nav');
+        const togle = document.getElementById('togle');
+
+        togle.addEventListener('click', function(e){
+          drawer.classList.toggle('open')
+          e.stopPropagation(e)
+        })
+    </script>
 </body>
 </html>
